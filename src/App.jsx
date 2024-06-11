@@ -23,7 +23,7 @@ const Faq = ({ data }) => {
     <div className="Faq-container">
       <h1>FAQs</h1>
       {data.map((item) => (
-        <FaqItem key={item.id} question={question} Answer={Answer}
+        <FaqItem key={item.id} question={item.question} Answer={item.Answer}
         />
       ))}
     </div>
