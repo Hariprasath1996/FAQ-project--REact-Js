@@ -14,19 +14,17 @@ body {
     justify-content: start;
     align-items: center;
     background-color: darkgrey;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.container {
-    width: 100%;
+    overflow-x: hidden;
 }
 
 .Faq-container {
     background-color: white;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
 
 .FaqItem-container {
@@ -34,32 +32,34 @@ body {
     margin-bottom: 10px;
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: rgb(37, 133, 218) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    box-shadow: rgba(2, 48, 80, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .que-box {
     font-size: larger;
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(0, 0, 0);
     padding: 10px;
     cursor: pointer;
     border-radius: 2px;
-    background-color: rgb(147, 175, 228);
-    
+    background-color: rgb(3, 62, 65);
+    color: #fff;
+    font-style: italic;
 }
 .que:hover {
     background-color: darkgray;
 }
 
 .Ans-Container {
-    background-color: #fff;
+    background-color: #041f16;
+    color: #fff;
     max-height: 0px;
     overflow: hidden;
     transition: height 3s ease;
 }
 .Ans {
-    font-size: x-large;
-    font-weight: 500;
+    font-size:18px;
+    font-weight: 400;
     padding: 10px;
 }
 .FaqItem-container.active .Ans-Container{

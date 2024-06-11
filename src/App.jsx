@@ -23,7 +23,10 @@ const Faq = ({ data }) => {
     <div className="Faq-container">
       <h1>FAQs</h1>
       {data.map((item) => (
-        <FaqItem key={item.id} question={item.question} Answer={item.Answer}
+        <FaqItem
+          key={item.id}
+          question={item.question}
+          Answer={item.Answer}
         />
       ))}
     </div>
@@ -40,8 +43,27 @@ const data = [
     id: 3, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
   },
   {
-    id: 3, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
-  }
+    id: 4, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 5, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 6, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 7, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 8, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 9, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 10, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+
 ]
 const App = () => {
   return (
