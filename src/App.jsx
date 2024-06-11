@@ -1,40 +1,53 @@
 import { useState } from "react"
 
-const FaqItem = () => {
-  const[show,setShow] = useState(false);
-  const toggleShowAnswer= ()=>{
+const FaqItem = ({ question, Answer }) => {
+  const [show, setShow] = useState(false);
+  const toggleShowAnswer = () => {
     setShow(!show)
   }
   return (
     <div className={`FaqItem-container ${show ? "active" : ""}`}>
       <div className="que-box" onClick={toggleShowAnswer}>
-          Sample Question ?
+        {question}
       </div>
       <div className="Ans-Container">
         <div className="Ans">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit.
+          {Answer}
         </div>
       </div>
     </div>
   )
 }
-const Faq = () => {
+const Faq = ({ data }) => {
   return (
     <div className="Faq-container">
       <h1>FAQs</h1>
-      <FaqItem />
-      <FaqItem />
-      <FaqItem />
-      <FaqItem />
-      <FaqItem />
+      {data.map((item) => (
+        <FaqItem key={item.id} question={question} Answer={Answer}
+        />
+      ))}
     </div>
   )
 }
+const data = [
+  {
+    id: 1, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 2, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 3, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  },
+  {
+    id: 3, question: "SampleQuestion ?", Answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vitae quisquam aut quas odit quae quo corrupti laudantium, ad impedit."
+  }
+]
 const App = () => {
   return (
     <>
       <div className="container">
-        <Faq />
+        <Faq data={data} />
       </div>
     </>
   );
